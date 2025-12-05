@@ -18,8 +18,7 @@ export default function HomePage() {
             in the <code>react-server-dom-*</code> packages.
           </li>
           <li>
-            <strong>CVE-2025-66478</strong> – Next.js integration of the same underlying RSC flaw affecting
-            App Router / server actions deployments.
+            <strong>CVE-2025-66478</strong> – This CVE is a duplicate of CVE-2025-55182 and rejected.
           </li>
         </ul>
       </section>
