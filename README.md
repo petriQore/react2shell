@@ -127,3 +127,6 @@ Content-Length: 195
 1:E{"digest":"uid=0(root) gid=0(root) groups=0(root),1(bin),2(daemon),3(sys),4(adm),6(disk),10(wheel),11(floppy),20(dialout),26(tape),27(video)"}
 
 ```
+
+<img width="1324" height="739" alt="image" src="https://github.com/user-attachments/assets/b64a6ee1-22d5-43e7-ba31-63676f915238" />
+
