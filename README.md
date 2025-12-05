@@ -2,7 +2,7 @@
 
 This repository provides a minimal intentionally vulnerable environment to test security scanners against the recent critical RCE vulnerabilities affecting React Server Components and Next.js.
 
-> **Warning**  
+> [!Warning] 
 > This setup is intentionally vulnerable and must never be exposed to the public internet or used in production.
 
 ---
