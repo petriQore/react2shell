@@ -31,7 +31,7 @@ Use the scanner provided by AssetNote:
 
 ```bash
 git clone https://github.com/assetnote/react2shell-scanner && cd react2shell-scanner
-virtualenv venv && source venv/bin/activate
+virtualenv venv && source venv/bin/activate && pip install -r requirements.txt
 
 python3 scanner.py -u http://127.0.0.1:3000
 ```
