@@ -4,6 +4,8 @@ This repository provides a minimal intentionally vulnerable environment to test 
 
 > **[CVE-2025-55182](https://nvd.nist.gov/vuln/detail/CVE-2025-55182)**: A pre-authentication remote code execution vulnerability exists in React Server Components versions 19.0.0, 19.1.0, 19.1.1, and 19.2.0 including the following packages: react-server-dom-parcel, react-server-dom-turbopack, and react-server-dom-webpack. The vulnerable code unsafely deserializes payloads from HTTP requests to Server Function endpoints.
 
+> **[CVE-2025-66478](https://nextjs.org/blog/CVE-2025-66478)**: Tracks the downstream impact on Next.js applications using the App Router.
+
 > [!Warning] 
 > This setup is intentionally vulnerable and must never be exposed to the public internet or used in production.
 
@@ -17,7 +19,10 @@ This app is a very small Next.js project that:
   - `next`: `16.0.6`
   - `react`: `19.2.0`
   - `react-dom`: `19.2.0`
-- Uses a minimal NextJS config with app router and React server actions 
+- Uses a minimal NextJS config with app router and React server actions
+
+> [!TIP]
+> Pinning `react` and `react-dom` is optional, as an affected `next` version is susceptible per default due to app router.
 
 ## How to run
 
