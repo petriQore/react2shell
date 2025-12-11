@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/l4rm4nd/CVE-2025-55182/compare/v1.0.4...v1.0.5) (2025-12-11)
+
+
+### Bug Fixes
+
+* add more references and info about downstream CVE-2025-66478 ([42e930c](https://github.com/l4rm4nd/CVE-2025-55182/commit/42e930cc61caff3dd35b864843eb9cf190a3068f))
+
 ## [1.0.4](https://github.com/l4rm4nd/CVE-2025-55182/compare/v1.0.3...v1.0.4) (2025-12-05)
 
 
