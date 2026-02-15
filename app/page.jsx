@@ -2,262 +2,167 @@ export default function HomePage() {
   return (
     <main
       style={{
-        maxWidth: "800px",
-        margin: "2rem auto",
-        padding: "0 1rem",
-        fontFamily: "system-ui, sans-serif",
+        maxWidth: "900px",
+        margin: "0 auto",
+        padding: "2rem 1rem",
+        fontFamily: "system-ui, -apple-system, sans-serif",
+        lineHeight: 1.6,
+        color: "#1f2937",
       }}
     >
-      <header>
-        <h1>React2Shell – Vulnerable PoC Stack</h1>
-        <p>
-          This Next.js application intentionally uses vulnerable React Server Components (RSC) and Next.js
-          versions in order to test how well security scanners can detect the related Remote Code Execution (RCE)
-          vulnerabilities.
+      <header
+        style={{
+          textAlign: "center",
+          marginBottom: "3rem",
+          paddingBottom: "2rem",
+          borderBottom: "1px solid #e5e7eb",
+        }}
+      >
+        <h1
+          style={{
+            fontSize: "2.8rem",
+            fontWeight: 700,
+            marginBottom: "0.75rem",
+            color: "#111827",
+          }}
+        >
+          Welcome to Acme Workspace
+        </h1>
+        <p
+          style={{
+            fontSize: "1.25rem",
+            color: "#4b5563",
+            maxWidth: "600px",
+            margin: "0 auto",
+          }}
+        >
+          Your modern platform for team collaboration, project management, and secure document sharing.
         </p>
       </header>
 
-      <section style={{ marginTop: "2rem" }}>
-        <h2>Affected Vulnerabilities</h2>
-        <ul>
-          <li>
-            <strong>
-              <a
-                href="https://nvd.nist.gov/vuln/detail/CVE-2025-55182"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                CVE-2025-55182
-              </a>
-            </strong>{" "}
-            – React Server Components “Flight” protocol unsafe deserialization.
-          </li>
-          <li>
-            <strong>
-              <a
-                href="https://nextjs.org/blog/CVE-2025-66478"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                CVE-2025-66478
-              </a>
-            </strong>{" "}
-            – Tracks the downstream impact on Next.js applications using the App Router.
-          </li>
-        </ul>
-      </section>
-
-      <section style={{ marginTop: "1.5rem" }}>
-        <h2>Environment purpose</h2>
-        <p>
-          This container is designed for:
-        </p>
-        <ul>
-          <li>Testing SCA and container scanners against known-vulnerable React / Next.js RSC versions</li>
-          <li>Reproducing detection rules and signatures in a controlled lab</li>
-          <li>Exploiting and learning about React2Shell in a controlled environment</li>
-        </ul>
-        <p
+      <section style={{ marginBottom: "3rem" }}>
+        <h2
           style={{
-            marginTop: "0.75rem",
-            color: "#b00020",
-            fontWeight: "bold",
+            fontSize: "2rem",
+            fontWeight: 600,
+            marginBottom: "1.5rem",
+            color: "#111827",
           }}
         >
-          Do not expose this container to the public internet, do not use it with real user data, and do not
-          deploy it in production.
+          Why teams choose Acme
+        </h2>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gap: "1.5rem",
+          }}
+        >
+          <div
+            style={{
+              padding: "1.5rem",
+              background: "#f9fafb",
+              borderRadius: "8px",
+              border: "1px solid #e5e7eb",
+            }}
+          >
+            <h3 style={{ fontSize: "1.25rem", fontWeight: 600, marginBottom: "0.75rem" }}>
+              Real-time collaboration
+            </h3>
+            <p style={{ color: "#4b5563" }}>
+              Work together seamlessly with live editing, comments, and notifications.
+            </p>
+          </div>
+
+          <div
+            style={{
+              padding: "1.5rem",
+              background: "#f9fafb",
+              borderRadius: "8px",
+              border: "1px solid #e5e7eb",
+            }}
+          >
+            <h3 style={{ fontSize: "1.25rem", fontWeight: 600, marginBottom: "0.75rem" }}>
+              Secure & private
+            </h3>
+            <p style={{ color: "#4b5563" }}>
+              End-to-end encryption and role-based access keep your data safe.
+            </p>
+          </div>
+
+          <div
+            style={{
+              padding: "1.5rem",
+              background: "#f9fafb",
+              borderRadius: "8px",
+              border: "1px solid #e5e7eb",
+            }}
+          >
+            <h3 style={{ fontSize: "1.25rem", fontWeight: 600, marginBottom: "0.75rem" }}>
+              Works everywhere
+            </h3>
+            <p style={{ color: "#4b5563" }}>
+              Available on web, desktop, and mobile — syncs across all your devices.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        style={{
+          textAlign: "center",
+          padding: "3rem 1rem",
+          background: "linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%)",
+          borderRadius: "12px",
+          marginBottom: "3rem",
+        }}
+      >
+        <h2 style={{ fontSize: "2.25rem", fontWeight: 700, marginBottom: "1rem" }}>
+          Get started in minutes
+        </h2>
+        <p style={{ fontSize: "1.125rem", maxWidth: "600px", margin: "0 auto 1.5rem" }}>
+          Create your first project, invite your team, and start collaborating today.
         </p>
-      </section>
-
-      <section style={{ marginTop: "1.5rem" }}>
-        <h2>Key vulnerable components</h2>
-        <ul>
-          <li>
-            React RSC packages:
-            <ul>
-              <li>
-                <code>react-server-dom-webpack</code> 19.0.0 / 19.1.0 / 19.1.1 / 19.2.0
-              </li>
-              <li>
-                <code>react-server-dom-parcel</code> 19.0.0 / 19.1.0 / 19.1.1 / 19.2.0
-              </li>
-              <li>
-                <code>react-server-dom-turbopack</code> 19.0.0 / 19.1.0 / 19.1.1 / 19.2.0
-              </li>
-            </ul>
-          </li>
-          <li>
-            Next.js:
-            <ul>
-              <li>All stable 15.x</li>
-              <li>All stable 16.x (prior to patched 16.0.7)</li>
-              <li>Canary builds from 14.3.0-canary.77 and above</li>
-            </ul>
-          </li>
-        </ul>
-      </section>
-
-      <section style={{ marginTop: "1.5rem" }}>
-        <h2>References</h2>
-        <ul>
-          <li>
-            Snyk / DEV post:{" "}
-            <a
-              href="https://dev.to/snyk/security-advisory-critical-rce-vulnerabilities-in-react-server-components-nextjs-3lef"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Security Advisory: Critical RCE Vulnerabilities in React Server Components &amp; Next.js
-            </a>
-          </li>
-          <li>
-            Snyk advisory – <code>react-server-dom-webpack</code>:{" "}
-            <a
-              href="https://security.snyk.io/vuln/SNYK-JS-REACTSERVERDOMWEBPACK-14173285"
-              target="_blank"
-              rel="noreferrer"
-            >
-              SNYK-JS-REACTSERVERDOMWEBPACK-14173285
-            </a>
-          </li>
-          <li>
-            Snyk advisory – <code>react-server-dom-turbopack</code>:{" "}
-            <a
-              href="https://security.snyk.io/vuln/SNYK-JS-REACTSERVERDOMTURBOPACK-14173287"
-              target="_blank"
-              rel="noreferrer"
-            >
-              SNYK-JS-REACTSERVERDOMTURBOPACK-14173287
-            </a>
-          </li>
-          <li>
-            Snyk advisory – <code>react-server-dom-parcel</code>:{" "}
-            <a
-              href="https://security.snyk.io/vuln/SNYK-JS-REACTSERVERDOMPARCEL-14173286"
-              target="_blank"
-              rel="noreferrer"
-            >
-              SNYK-JS-REACTSERVERDOMPARCEL-14173286
-            </a>
-          </li>
-          <li>
-            Snyk advisory – Next.js RSC integration:{" "}
-            <a
-              href="https://security.snyk.io/vuln/SNYK-JS-NEXT-14173355"
-              target="_blank"
-              rel="noreferrer"
-            >
-              SNYK-JS-NEXT-14173355
-            </a>
-          </li>
-
-          {/* Additional CVE focused references */}
-          <li>
-            React blog – Critical Security Vulnerability in React Server Components (CVE-2025-55182):{" "}
-            <a
-              href="https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Critical Security Vulnerability in React Server Components
-            </a>
-          </li>
-          <li>
-            NVD entry – React RSC RCE (CVE-2025-55182):{" "}
-            <a
-              href="https://nvd.nist.gov/vuln/detail/CVE-2025-55182"
-              target="_blank"
-              rel="noreferrer"
-            >
-              CVE-2025-55182
-            </a>
-          </li>
-          <li>
-            Next.js security advisory – CVE-2025-66478:{" "}
-            <a
-              href="https://nextjs.org/blog/CVE-2025-66478"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Security Advisory: CVE-2025-66478
-            </a>
-          </li>
-          <li>
-            NVD entry – Next.js RSC impact (CVE-2025-66478):{" "}
-            <a
-              href="https://nvd.nist.gov/vuln/detail/CVE-2025-66478"
-              target="_blank"
-              rel="noreferrer"
-            >
-              CVE-2025-66478
-            </a>
-          </li>
-        </ul>
+        <button
+          style={{
+            background: "#3b82f6",
+            color: "white",
+            padding: "0.875rem 2rem",
+            fontSize: "1.125rem",
+            fontWeight: 600,
+            border: "none",
+            borderRadius: "8px",
+            cursor: "pointer",
+          }}
+        >
+          Sign Up Free
+        </button>
       </section>
 
       <footer
         style={{
-          marginTop: "2rem",
-          paddingTop: "1rem",
-          borderTop: "1px solid #e0e0e0",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          fontSize: "0.9rem",
+          textAlign: "center",
+          paddingTop: "2rem",
+          borderTop: "1px solid #e5e7eb",
+          fontSize: "0.95rem",
+          color: "#6b7280",
         }}
       >
-        <a
-          href="https://github.com/l4rm4nd/CVE-2025-55182"
-          target="_blank"
-          rel="noreferrer"
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            textDecoration: "none",
-            color: "inherit",
-            fontWeight: 500,
-          }}
-          aria-label="View the CVE-2025-55182 PoC repository on GitHub"
-        >
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            role="img"
-            aria-hidden="true"
+        <p>© {new Date().getFullYear()} Acme Inc. All rights reserved.</p>
+        <p style={{ marginTop: "0.5rem" }}>
+          <a
+            href="/privacy"
+            style={{ color: "#6b7280", textDecoration: "none", margin: "0 0.75rem" }}
           >
-            <path
-              fill="currentColor"
-              d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577
-                 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61
-                 C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729
-                 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998
-                 .108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93
-                 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176
-                 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405
-                 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23
-                 .645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22
-                 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22
-                 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57
-                 C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
-            />
-          </svg>
-          <span style={{ marginLeft: "0.5rem" }}>CVE-2025-55182 PoC on GitHub</span>
-        </a>
-
-        <div>
-          <span>
-            Provided by{" "}
-            <a
-              href="https://github.com/l4rm4nd"
-              target="_blank"
-              rel="noreferrer"
-              style={{ fontWeight: 600 }}
-            >
-              LRVT
-            </a>
-          </span>
-        </div>
+            Privacy Policy
+          </a>
+          <a
+            href="/terms"
+            style={{ color: "#6b7280", textDecoration: "none", margin: "0 0.75rem" }}
+          >
+            Terms of Service
+          </a>
+        </p>
       </footer>
     </main>
   );
