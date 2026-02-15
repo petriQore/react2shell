@@ -1,3 +1,5 @@
+import React from 'react'; 
+
 export const metadata = {
   title: "Welcome",
   description: "Modern workspace for teams",
